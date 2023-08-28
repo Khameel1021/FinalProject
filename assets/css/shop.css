@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+#navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #ffff;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 0 8px #ccc;
+}
+
+.top-nav{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 22px;
+    overflow: hidden;
+    z-index: 1000;
+    background-color: #ffff;
+}
+
+.top-nav .navmenu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.top-nav .navmenu ul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.top-nav .top-header a{
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.top-nav .navmenu ul li a{
+    font-size: 18px;
+    color: #1B3358;
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-right: 11px;
+    padding-left: 11px;
+}
+
+
+.top-nav .navmenu ul li a:hover{
+    color: #f5d7db;
+}
+
+.top-nav .top-icons{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #1B3358;
+}
+
+.top-nav .top-icons i{
+    font-size: 18px;
+    padding-right: 19px;
+    cursor: pointer;
+    transition: .42s;
+}
+
+.top-nav .top-icons i:hover{
+    color: #f5d7db;
+    transform: scale(1.1);
+}
+
+.top-nav #menuBar{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    text-align: center;
+}
+
+#shop h2{
+    font-size: 34px;
+    padding: 20px;
+    text-align: center;
+    color: #1B3358;
+}
+
+.items-row{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.items-row .items-col{
+    border: 1px solid #ccc;
+    box-shadow: 0 0 8px #ccc;
+    width: 300px;
+}
+
+.items-row .items-col .items-img{
+    object-fit: cover;
+    object-position: center;
+    width: 300px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+.items-row .items-col .items-img  img{
+    width: 100%;
+    height: 100%;
+}
+
+.items-row .items-col .items-img .card{
+    width: 100%;
+    background: #1B3358;
+    color: #ccc;
+    padding: 9px;
+    font-size: 18px;
+    height: 0;
+    cursor: pointer;
+    transition: .42s;
+    display: none;
+}
+
+.items-row .items-col:hover .items-img .card{
+    height: 50px;
+    display: block;
+}
+
+.items-row .items-col .content{
+    border-top: 4px solid #1B3358;
+    margin-top: -4px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.items-row .items-col .content h4{
+    font-size: 20px;
+    color: #1B3358;
+}
+
+.items-row .items-col .content span{
+    color: #1B3358;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+
+@media(max-width:768px){
+    .top-nav .navmenu{
+        display: block;
+        position: fixed;
+        right: 100%;
+        top: 16.5%;
+        width: 240px;
+        height: 100vh;
+        border: 1px solid #ffff;
+        background-color: #ffff;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .top-nav .navmenu.open{
+        right: 0;
+    }
+
+    .top-nav .top-navbar ul{
+        display: block;
+        margin: 30px 0;
+    }
+
+    .top-nav .top-navbar ul li{
+        margin: 30px;
+    }
+
+    .top-nav .top-icons i{
+        position: relative;
+        left: 32%;
+    }
+
+    .top-nav #menuBar{
+        display: block;
+    }
+
+    .header .contact .normal{
+        display: none;
+    }
+
+    #navbar{
+        height: 100px;
+        background-color: #ffff;
+    }
+
+    .items-row{
+        width: 67%;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:540px){
+    .items-row{
+        width: 75%;
+        grid-template-columns: 1fr;
+    }
+
+    .items-row .items-col{
+        width: 220px;
+    }
+
+    .items-row .items-col .items-img{
+        width: 220px;
+        height: 200px;
+    }
+
+    .items-row .items-col .content h4{
+        font-size: 20px;
+
+    }
+}
+

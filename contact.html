@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS FILE-->
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <!--TITLE-->
+    <title>Contact Us</title>
+    <!--FONT AWESOME CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+    <!-- Google Fonts Cdn-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="navbar">
+        <div class="top-nav">
+            <div class="top-header">
+                <a href="index.html" style="color: #1B3358;">Crepz&Kickz</a>
+            </div>
+
+            <div class="navmenu">
+                <div class="top-navbar">
+                    <ul>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/login.html">Login</a></li>
+                        <li><a href="/delivery.html">Delivery</a></li>
+                        <li><a href="/shipping.html">Shipping</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="top-icons">
+                    <i class="fa fa-user"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fa fa-search"></i>
+                </div>
+            </div>
+
+            <i class="fa fa-bars" id="menuBar"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "tobigbadamosi01@gmail.com",
+                Password : "password",
+                To : 'tobigbadamosi01@gmail.com',
+                From : document.getElementbyId('email').value,
+                Subject : "New Contact Form",
+                Body : "Name:" + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone No: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+            message => alert("message")
+            );
+        }
+        
+    </script>
+
+    <!--JAVASCRIPT-->
+    <script src="./assets/javascript/index.js"></script>
+</body>
+</html>
