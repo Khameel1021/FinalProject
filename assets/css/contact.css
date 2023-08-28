@@ -94,7 +94,7 @@
     justify-content: center;
     height: 400px;
     height: 95vh;
-    background-image: url(/assets/images/background.png.webp);
+    background-image: url(assets/images/background.png.webp);
     background-position: center;
     background-size: cover;
     position: relative;
