@@ -88,7 +88,7 @@
 }
 
 body{
-    background-image: url(assets/images/background.webp);
+    background-image: url(../images/background.webp);
     background-position: center;
     background-size: cover;
     position: relative;
